@@ -14,13 +14,12 @@
 \bibliographystyle{apalike}%For the bibliography
 
 \begin{document}
-
-\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
 \item Let's create some aRt! 
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,7 +63,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
 @
-\caption{Figure made using \texttt{canvas_collatz()}}
+\caption{Caption}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -76,8 +75,6 @@ canvas_collatz(colors = colorPalette("tuscany3"))
   update the caption.\\
 \textbf{Solution:}
 <<CollatzPlot2, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-set.seed(1313)
-canvas_collatz(colors = colorPalette("tuscany3"))
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -85,7 +82,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot2>>
 @
-\caption{Random seed is 1313, the branches of the graph appear closer together}
+\caption{A caption...}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -106,13 +103,6 @@ canvas_collatz(colors = colorPalette("tuscany3"))
   \end{itemize}
 \textbf{Solution:}
 <<CollatzPlot3, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-set.seed(1)
-canvas_collatz(
-  colors = colorPalette("vrolik4"),
-  background = '#dbdbdb',
-  n = 72,
-  angle.odd = -0.05,
-  angle.even = 0.0145)
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -120,7 +110,7 @@ canvas_collatz(
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot3>>
 @
-\caption{Plot with specified arguments}
+\caption{A caption...}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}
@@ -131,21 +121,6 @@ canvas_collatz(
   Note that I leave creating the R chunk and figure environment to you here. 
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
-<<CollatzPlot4, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-set.seed(1)
-canvas_smoke(colors = colorPalette("blossom"),
-             shape = c("clouds"),
-             algorithm = c("average"))
-@
-\begin{figure}[H]
-\begin{center}
-<<echo=FALSE,fig.dim=c(4,4)>>=
-# <<CollatzPlot4>>
-@
-\caption{Plot created using \texttt{canvas_smoke}}
-\label{CollatzPlot4}
-\end{center}
-\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,7 +128,7 @@ canvas_smoke(colors = colorPalette("blossom"),
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R} \citep{artsy}.
+package for \texttt{R}.
 \end{enumerate}
 
 \newpage
@@ -164,47 +139,32 @@ package for \texttt{R} \citep{artsy}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Suppose we wanted to solve $2^{x+1} +2^{x-1} = 40$ for $x$. While this is a pretty straightforward algebra problem, it's useful for demonstrating the use of objects in R. 
-  \begin{enumerate}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2a
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{enumerate}
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
-<<size="scriptsize">>=
-num <- seq(from = 0, to = 10, by = 1)
-@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2b
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
-<<size="scriptsize">>=
-result <- 2^(num+1) + 2^(num-1)
-@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
-<<size='scriptsize'>>=
-position <- which(result==40)
-@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
 \textbf{Solution:}
-<<size='scriptsize'>>=
-sol <- num[position]
-@
-The solution is \Sexpr{sol}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
 \textbf{Solution:}
-
-This approach would not work to find a solution $x$ which is not an integer, because the numeric vector created in step 2a contains only integers (numbers without any decimal value). However, in the example of the problem in 2e, the true solution has decimal value.
 \end{enumerate}
 \end{enumerate}
 
