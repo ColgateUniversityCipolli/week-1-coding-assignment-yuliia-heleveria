@@ -216,10 +216,7 @@
 \end{knitrout}
 \begin{figure}[H]
 \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
-\end{knitrout}
+
 \caption{Plot created using \texttt{canvas_smoke}}
 \label{CollatzPlot4}
 \end{center}
@@ -260,21 +257,45 @@ package for \texttt{R} \citep{artsy}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{result} \hlkwb{<-} \hlnum{2}\hlopt{^}\hldef{(num}\hlopt{+}\hlnum{1}\hldef{)} \hlopt{+} \hlnum{2}\hlopt{^}\hldef{(num}\hlopt{-}\hlnum{1}\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{position} \hlkwb{<-} \hlkwd{which}\hldef{(result}\hlopt{==}\hlnum{40}\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{sol} \hlkwb{<-} \hldef{num[position]}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+The solution is 4.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
 \textbf{Solution:}
+
+This approach would not work to find a solution $x$ which is not an integer, because the numeric vector created in step 2a contains only integers (numbers without any decimal value). However, in the example of the problem in 2e, the true solution has decimal value.
 \end{enumerate}
 \end{enumerate}
 
