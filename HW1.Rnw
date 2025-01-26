@@ -64,7 +64,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
 @
-\caption{Caption}
+\caption{Figure made using \texttt{canvas collatz()}}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -76,6 +76,8 @@ canvas_collatz(colors = colorPalette("tuscany3"))
   update the caption.\\
 \textbf{Solution:}
 <<CollatzPlot2, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1313)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -83,7 +85,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot2>>
 @
-\caption{A caption...}
+\caption{Random seed is 1313, the branches of the graph appear closer together}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -104,6 +106,13 @@ canvas_collatz(colors = colorPalette("tuscany3"))
   \end{itemize}
 \textbf{Solution:}
 <<CollatzPlot3, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1)
+canvas_collatz(
+  colors = colorPalette("vrolik4"),
+  background = '#dbdbdb',
+  n = 72,
+  angle.odd = -0.05,
+  angle.even = 0.0145)
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -111,7 +120,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot3>>
 @
-\caption{A caption...}
+\caption{Plot with specified arguments}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}
