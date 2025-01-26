@@ -64,7 +64,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
 @
-\caption{Figure made using \texttt{canvas collatz()}}
+\caption{Figure made using \texttt{canvas_collatz()}}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -131,6 +131,21 @@ canvas_collatz(
   Note that I leave creating the R chunk and figure environment to you here. 
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
+<<CollatzPlot4, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1)
+canvas_smoke(colors = colorPalette("blossom"),
+             shape = c("clouds"),
+             algorithm = c("average"))
+@
+\begin{figure}[H]
+\begin{center}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+<<CollatzPlot4>>
+@
+\caption{Plot created using \texttt{canvas_smoke}}
+\label{CollatzPlot4}
+\end{center}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,7 +153,7 @@ canvas_collatz(
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.
+package for \texttt{R} \citep{artsy}.
 \end{enumerate}
 
 \newpage

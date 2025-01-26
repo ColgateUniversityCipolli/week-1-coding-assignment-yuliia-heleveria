@@ -127,7 +127,7 @@
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
 \end{knitrout}
-\caption{Figure made using \texttt{canvas collatz()}}
+\caption{Figure made using \texttt{canvas_collatz()}}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -204,6 +204,26 @@
   Note that I leave creating the R chunk and figure environment to you here. 
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{set.seed}\hldef{(}\hlnum{1}\hldef{)}
+\hlkwd{canvas_smoke}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"blossom"}\hldef{),}
+             \hlkwc{shape} \hldef{=} \hlkwd{c}\hldef{(}\hlsng{"clouds"}\hldef{),}
+             \hlkwc{algorithm} \hldef{=} \hlkwd{c}\hldef{(}\hlsng{"average"}\hldef{))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\begin{figure}[H]
+\begin{center}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
+\end{knitrout}
+\caption{Plot created using \texttt{canvas_smoke}}
+\label{CollatzPlot4}
+\end{center}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -211,7 +231,7 @@
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.
+package for \texttt{R} \citep{artsy}.
 \end{enumerate}
 
 \newpage
