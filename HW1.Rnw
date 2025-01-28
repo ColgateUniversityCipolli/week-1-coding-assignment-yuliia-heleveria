@@ -207,5 +207,6 @@ The solution is \Sexpr{sol}.
 This approach would not work to find a solution $x$ which is not an integer, because the numeric vector created in step 2a contains only integers (numbers without any decimal value). However, in the example of the problem in 2e, the true solution has decimal value.
 \end{enumerate}
 \end{enumerate}
+\bibliography{bibliography.bib}
 
 \end{document}
